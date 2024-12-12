@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Navigation Buttons</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .softer-hexagon {
+            clip-path: polygon(
+                52% 0%,
+                98% 27%,
+                98% 73%,
+                52% 100%,
+                2% 73%,
+                2% 27%
+            );
+            border-radius: 28px; /* Added border-radius */
+        }
+    </style>
+</head>
+<body class="h-full bg-gray-100 flex flex-col">
+    <main class="flex-grow p-8">
+        <div class="prose lg:prose-xl mx-auto mt-20">
+            <h1>Main Content</h1>
+            <p>
+                This is some example content to push the buttons to the
+                bottom. Add more content here to see the effect.
+            </p>
+            <!-- ... rest of your main content ... -->
+        </div>‍
+    </main>
+
+    <footer class="bg-white/5 backdrop-blur-sm border-t border-gray-200 py-4 px-8 w-full sticky bottom-0">
+        <div class="flex space-x-4 justify-between relative">
+            <a href="#" class="hover:bg-blue-400 text-black font-bold py-2 px-4 rounded">
+                <i class="fa-solid fa-house text-2xl"></i>
+            </a>
+            <a href="#" class="hover:bg-blue-400 text-black font-bold py-2 px-4 rounded">
+                <i class="fa-solid fa-location-dot text-2xl"></i>
+            </a>
+            <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                <a href="#" class="text-black font-bold">
+                    <div class="w-16 h-16 flex items-center justify-center softer-hexagon shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                        <i class="fa-solid fa-qrcode text-2xl text-white"></i>
+                    </div>
+                </a>
+            </div>
+            <a href="#" class="hover:bg-blue-400 text-black font-bold py-2 px-4 rounded">
+                <i class="fa-solid fa-signal text-2xl"></i>
+            </a>
+            <a href="#" class="hover:bg-blue-400 text-black font-bold py-2 px-4 rounded">
+                <i class="fa-regular fa-user text-2xl"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
